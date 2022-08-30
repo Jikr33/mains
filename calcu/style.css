@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: lightcyan;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+}
+.side1{
+    background-color: rgb(138, 204, 183);
+    display: flex;
+    font-size: 20px;
+    font-weight: 1;
+    justify-content: start;
+    align-items: center;
+}
+.welcome {
+    width: fit-content;
+    margin-left: 30px;
+    font-family: 'Exo 2', sans-serif;
+}
+.side2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calcu {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+#enter {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-bottom: rgb(31, 192, 255) 2px solid;
+}
+#input {
+    width: 75%;
+    height: 60%;
+    background: none;
+    border: none;
+    border-bottom: solid 1px black;
+    text-align:end;
+    min-height: 30px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+    font-size: 25px;
+    font-family: 'Fira Sans', sans-serif;
+
+}
+#enter input:focus {
+    outline: none;
+}
+.operation {
+    display: grid;
+    grid-template-areas: 
+        "four1 four2 four3 four4"
+        "threes11 threes12 threes13 equals1"
+        "threes21 threes22 threes23 equals2"
+        "threes31 threes32 threes33 equals3"
+        "zeros1 zeros2 period equals4";
+}
+.four {
+    grid-column-start: four1;
+    grid-column-end: four4;
+    grid-row-start: four1;
+    display: flex;
+    justify-content: space-around;
+}
+.four > button, .threes1 > button, .threes2 > button, .threes3 > button, .zeros, .period, .equals  {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+.threes1 {
+    grid-column-start: threes11;
+    grid-column-end: threes13;
+    grid-row-start: threes11;
+    display: flex;
+    justify-content: space-around;
+}
+.threes2 {
+    grid-column-start: threes21;
+    grid-column-end: threes23;
+    grid-row-start: threes21;
+    display: flex;
+    justify-content: space-around;
+}
+.threes3 {
+    grid-column-start: threes31;
+    grid-column-end: threes33;
+    grid-row-start: threes31;
+    display: flex;
+    justify-content: space-around;
+}
+.zeros {
+    grid-column-start: zeros1;
+    grid-column-end: zeros2;
+    grid-row-start: zeros1;
+}
+.period {
+    grid-column-start: period;
+    grid-row-start: period;
+}
+.equals {
+    grid-column-start: equals1;
+    grid-row-start: equals1;
+    grid-row-end: equals4;
+}
+.four > button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 80px;
+    /* transform: rotateZ(45deg); */
+}
+.threes1 > button, .threes2 > button, .threes3 > button, .period {
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 80px;
+}
+.zeros {
+    width: 130px;
+    height: 55px;
+    border: none;
+    border-radius: 80px;
+}
+.equals {
+    width: 50px;
+    height: 200px;
+    border: none;
+    border-radius: 80px;
+}
+.back {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: fit-content;
+}
+#backspace {
+    background: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    color: rgb(93, 162, 139);
+    padding: 10px;
+    margin-right: 20px;
+}
+#clear{
+    background: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    font-size: 20px;
+    color: rgb(32, 121, 121);
+    padding: 10px;
+}
+
+
+@media (max-width: 450px){
+    .side1 {
+        visibility: collapse;
+        display: none;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .calcu {
+        width: 90%;
+    }
+    .operation {
+        height: 400px;
+    }
+    .equals {
+        height: 270px;
+    }
+}

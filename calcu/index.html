@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6a8ff321a9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Mandali&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="side side1">
+            <div class="welcome">
+                <h3>Welcome to my ...</h3>
+                <h1>Calcu Lator</h1>
+            </div>
+        </div>
+        <div class="side side2">
+            <div class="calcu">
+                <div id="enter">
+                    <div id="input"></div>
+                </div>
+                <div class="back">
+                    <button id="clear" onclick="clears()">CLEAR</button>
+                    <button id="backspace" onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button>
+                </div>
+                <div class="operation">
+                    <div class="four">
+                        <button onclick="insert('÷')">÷</button>
+                        <button onclick="insert('×')">×</button>
+                        <button onclick="insert('-')">-</button>
+                        <button onclick="insert('+')">+</button>
+                    </div>
+                    <div class="threes1">
+                        <button onclick="insert('7')">7</button>
+                        <button onclick="insert('8')">8</button>
+                        <button onclick="insert('9')">9</button>
+                    </div>
+                    <div class="threes2">
+                        <button onclick="insert('4')">4</button>
+                        <button onclick="insert('5')">5</button>
+                        <button onclick="insert('6')">6</button>
+                    </div>
+                    <div class="threes3">
+                        <button onclick="insert('1')">1</button>
+                        <button onclick="insert('2')">2</button>
+                        <button onclick="insert('3')">3</button>
+                    </div>
+                    <button class="zeros" onclick="insert('0')">0</button>
+                    <button class="period" onclick="insert('.')">.</button>
+                    <button class="equals" onclick="equals()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
