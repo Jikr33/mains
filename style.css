@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     background-image: url(./pexels-janez-podnar-1424246.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -27,4 +27,57 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     color: rgb(247, 206, 26);
+}
+footer{
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 3fr;
+    height: 5vh;
+}
+footer > h1 {
+    font-size: 0.5rem;
+    color: rgb(255, 255, 255);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    justify-content: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.contact {
+    grid-column-start: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact a {
+    color: rgb(12, 161, 107);
+    text-decoration: none;
+}
+
+@media (max-width: 400px) {
+    .container {
+        background-image: url(./pexels-sam-willis-3934512.jpg);
+        height: 90vh;
+    }
+    footer {
+        height: 10vh;
+        grid-template-columns: 1fr 1.5fr;
+    }
+    .contact {
+        grid-column-start: 2;
+    }
+    .contact a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    footer > h1 {
+        width: 100%;
+        margin-left: 10px;
+    }
 }
