@@ -58,7 +58,7 @@ footer > h1 {
     text-decoration: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .container {
         background-image: url(./pexels-sam-willis-3934512.jpg);
         height: 90vh;
